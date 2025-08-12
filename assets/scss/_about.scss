@@ -1,9 +1,12 @@
+// _about.scss
 .about {
-  text-align: center;
+  background: white;
+  border-radius: 8px;
+  padding: 4rem 2rem;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
   opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease;
-
+  transform: translateY(40px);
+  transition: all 0.9s ease;
   &.visible {
     opacity: 1;
     transform: translateY(0);
