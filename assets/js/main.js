@@ -223,5 +223,24 @@ window.addEventListener("scroll", function () {
 
 // Langue switcher
 document.getElementById("lang-switch").addEventListener("change", function () {
-  window.location.href = this.value;
+  let target = this.value;
+
+  // On détecte si on est déjà dans un sous-dossier (ex: /en/ ou /he/)
+  const currentPath = window.location.pathname;
+
+  if (target === "index.html") {
+    // On veut revenir à la racine
+    if (currentPath.includes("/en/") || currentPath.includes("/he/")) {
+      window.location.href = "../index.html";
+    } else {
+      window.location.href = "index.html";
+    }
+  } else {
+    // Pour aller vers en/ ou he/ → toujours relatif à la racine
+    if (currentPath.includes("/en/") || currentPath.includes("/he/")) {
+      window.location.href = "../" + target;
+    } else {
+      window.location.href = target;
+    }
+  }
 });
