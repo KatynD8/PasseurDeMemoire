@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testimonies Project</title>
+    <link rel="stylesheet" href="../assets/scss/main.css " />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/471665c4dc.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">🎙️ Memory Keeper</div>
+      <nav>
+        <a href="#about">Project</a>
+        <a href="#contact">Contact</a>
+        <label for="lang-switch"> Language:</label>
+        <select id="lang-switch">
+          <option value="/index.html">French</option>
+          <option value="/en/index.html" selected>English</option>
+          <option value="/he/index.html">Hebrew</option>
+        </select>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Gathering and sharing authentic voices</h1>
+        <p>A space to listen, understand, and pass on unique stories.</p>
+      </div>
+      <a href="#contact" class="btn-primary">Join the project</a>
+      <aside>
+        <i class="fa-brands fa-instagram"></i
+        ><i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-x-twitter"></i>
+      </aside>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+      <h2>About the project</h2>
+      <p>
+        This project aims to collect video and audio testimonies to create a
+        living archive of personal stories. Every voice matters, every story
+        deserves to be heard.
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <h2>Contact the artist</h2>
+      <form action="#" method="post">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="email" placeholder="Your email" required />
+        <textarea name="message" placeholder="Your message" required></textarea>
+        <button type="submit" class="btn-primary">Send</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© 2025 Testimonies – All rights reserved.</p>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

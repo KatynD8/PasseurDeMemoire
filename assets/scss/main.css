@@ -3,6 +3,7 @@ body {
   color: #2a2a2a;
   background: #f7f5f1;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -29,7 +30,9 @@ section {
   padding: 1rem 2rem;
   font-size: 1.1rem;
   border-radius: 50px;
-  transition: background 0.3s;
+  transition: all 0.4 ease;
+  border: none;
+  cursor: pointer;
 }
 .btn-primary:hover, .header a.btn-cta:hover {
   background: rgb(150.2148760331, 111.7223140496, 76.9851239669);
@@ -65,6 +68,9 @@ section {
 }
 .header .logo {
   font-size: larger;
+}
+.header label {
+  padding-left: 100px;
 }
 
 .hero {

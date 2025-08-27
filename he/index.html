@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>פרויקט עדויות</title>
+    <link rel="stylesheet" href="../assets/scss/main.css " />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/471665c4dc.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">🎙️ שומר הזיכרון</div>
+      <nav>
+        <a href="#about">הפרויקט</a>
+        <a href="#contact">צור קשר</a>
+        <label for="lang-switch"> שפה:</label>
+        <select id="lang-switch">
+          <option value="/index.html">צרפתית</option>
+          <option value="/en/index.html">אנגלית</option>
+          <option value="/he/index.html" selected>עברית</option>
+        </select>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>איסוף ושיתוף קולות אמיתיים</h1>
+        <p>מקום להקשיב, להבין ולהעביר סיפורים ייחודיים.</p>
+      </div>
+      <a href="#contact" class="btn-primary">הצטרפו לפרויקט</a>
+      <aside>
+        <i class="fa-brands fa-instagram"></i
+        ><i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-x-twitter"></i>
+      </aside>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+      <h2>על הפרויקט</h2>
+      <p>
+        פרויקט זה שואף לאסוף עדויות בווידאו ובאודיו כדי ליצור ארכיון חי של
+        סיפורים אישיים. לכל קול יש חשיבות, וכל סיפור ראוי להישמע.
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <h2>צור קשר עם האמן</h2>
+      <form action="#" method="post">
+        <input type="text" name="name" placeholder="שמך" required />
+        <input type="email" name="email" placeholder="האימייל שלך" required />
+        <textarea name="message" placeholder="ההודעה שלך" required></textarea>
+        <button type="submit" class="btn-primary">שלח</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© 2025 עדויות – כל הזכויות שמורות.</p>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>
