@@ -7,6 +7,7 @@
   opacity: 0;
   transform: translateY(40px);
   transition: all 0.9s ease;
+  margin: 50px;
   &.visible {
     opacity: 1;
     transform: translateY(0);

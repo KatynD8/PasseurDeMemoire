@@ -2,9 +2,11 @@
 body {
   font-family: $font-body;
   color: $color-text;
-  background: $color-bg;
+  background: $color-accent;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 h1 {
   color: white;

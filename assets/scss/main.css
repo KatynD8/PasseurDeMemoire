@@ -1,9 +1,11 @@
 body {
   font-family: "Montserrat", sans-serif;
   color: #2a2a2a;
-  background: #f7f5f1;
+  background: #0037b8;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -77,7 +79,7 @@ section {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/gettyimages-1088825610-640x640.jpg") center/cover no-repeat;
   color: white;
   padding: 8rem 1.5rem;
-  height: 50dvh;
+  height: 60dvh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -103,12 +105,12 @@ section {
 }
 .hero aside {
   position: absolute;
-  top: 10rem;
-  right: 2rem;
+  right: 8rem;
   font-size: 1.5rem;
   z-index: 10;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
+  align-items: center;
   gap: 40px;
 }
 .hero aside i {
@@ -146,9 +148,10 @@ section {
 .hero-content {
   display: flex;
   flex-direction: column;
-  text-align: start;
+  text-align: center;
   width: min(50dvh, 100%);
-  max-width: 600px;
+  max-width: 700px;
+  padding-left: 3rem;
 }
 
 .about {
@@ -159,6 +162,7 @@ section {
   opacity: 0;
   transform: translateY(40px);
   transition: all 0.9s ease;
+  margin: 50px;
 }
 .about.visible {
   opacity: 1;
@@ -167,7 +171,8 @@ section {
 
 .contact {
   background: rgba(255, 255, 255, 0.9);
-  border-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
   padding: 3rem 2rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   opacity: 0;
@@ -175,7 +180,7 @@ section {
   transition: all 0.9s ease;
 }
 .contact form {
-  max-width: 500px;
+  width: 70%;
   margin: auto;
   display: flex;
   flex-direction: column;
