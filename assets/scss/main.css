@@ -25,7 +25,7 @@ section {
 }
 
 .btn-primary, .header a.btn-cta {
-  background: #ad845f;
+  background: #0037b8;
   color: #fff;
   padding: 1rem 2rem;
   font-size: 1.1rem;
@@ -35,13 +35,13 @@ section {
   cursor: pointer;
 }
 .btn-primary:hover, .header a.btn-cta:hover {
-  background: rgb(150.2148760331, 111.7223140496, 76.9851239669);
+  background: rgb(0, 42.8043478261, 143.2);
 }
 
 .header {
   position: sticky;
   top: 0;
-  background: #ad845f;
+  background: #0037b8;
   color: white;
   padding: 1rem 1.5rem;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
@@ -60,7 +60,7 @@ section {
 }
 .header a:hover {
   background-color: white;
-  color: #ad845f;
+  color: #0037b8;
 }
 .header a.btn-cta {
   padding: 0.6rem 1.2rem;
@@ -190,7 +190,7 @@ section {
 }
 .contact form input:focus,
 .contact form textarea:focus {
-  border-color: #ad845f;
+  border-color: #0037b8;
 }
 .contact form button {
   align-self: center;

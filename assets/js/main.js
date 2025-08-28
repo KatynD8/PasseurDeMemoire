@@ -45,20 +45,6 @@ const scrollObserver = new IntersectionObserver(
   observerOptions
 );
 
-// Animation du header au scroll
-function handleHeaderScroll() {
-  const header = document.querySelector(".header");
-  const scrollY = window.scrollY;
-
-  if (scrollY > 100) {
-    header.style.backgroundColor = "rgba(173, 132, 95, 0.95)";
-    header.style.backdropFilter = "blur(10px)";
-  } else {
-    header.style.backgroundColor = "#ad845f";
-    header.style.backdropFilter = "none";
-  }
-}
-
 // Animation des icônes sociales
 function animateSocialIcons() {
   const socialIcons = document.querySelectorAll(".hero aside i");
