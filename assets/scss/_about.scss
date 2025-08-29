@@ -2,14 +2,59 @@
 .about {
   background: white;
   border-radius: 8px;
-  padding: 4rem 2rem;
+  padding: 0rem;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
   opacity: 0;
   transform: translateY(40px);
   transition: all 0.9s ease;
   margin: 50px;
+
   &.visible {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Les deux sections utilisent flex */
+#about_me,
+#about_why {
+  display: flex;
+}
+
+/* About me : image à gauche, texte à droite */
+#about_me {
+  flex-direction: row;
+}
+
+/* About why : image à droite, texte à gauche */
+#about_why {
+  flex-direction: row-reverse;
+
+  .about-me_left {
+    img {
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+  }
+}
+
+/* Partie texte */
+.about-me_right {
+  flex: 1; // occupe 50% de l’espace
+  padding: 4rem 2rem;
+}
+
+/* Partie image */
+.about-me_left {
+  flex: 0.5; // occupe 50% de l’espace
+  img {
+    width: 100%; // s’adapte à la largeur
+
+    object-fit: cover; // rogne l’image si besoin pour remplir
+    display: block; // évite l’espace blanc en bas
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
   }
 }

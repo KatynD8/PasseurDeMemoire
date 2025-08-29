@@ -34,14 +34,21 @@
 
   aside {
     position: absolute;
-
-    right: 8rem;
+    bottom: 3rem;
+    right: 50%;
+    transform: translate((50%, 0));
     font-size: 1.5rem;
     z-index: 10;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
     gap: 40px;
+
+    .CTA_down {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+    }
 
     i {
       color: white;
