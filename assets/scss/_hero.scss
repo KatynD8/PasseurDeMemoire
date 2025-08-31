@@ -1,17 +1,36 @@
 .hero {
-  background-image: url("../img/hero_background.png");
-  background-size: cover; /* plutôt que 100% */
-  background-position: center;
-  background-repeat: no-repeat;
-
-  color: black;
-  padding: 1rem 1.5rem;
-  min-height: 75vh; /* dvh peut poser problème sur mobile */
   position: relative;
+  color: whitesmoke;
+  padding: 1rem 1.5rem;
+  min-height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  overflow: hidden; // pour contenir le ::before
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                      url("../img/materiel-photo-video-blog-vlog-79.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+    transform: scale(1);
+    animation: slowZoom 10s ease-in-out forwards;
+  }
+
+  @keyframes slowZoom {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.15); 
+    }
+  }
 
   & > * {
     position: relative;
@@ -19,11 +38,10 @@
   }
 
   h1 {
-    font-family: "Kumar One", serif;
+    font-family: "Limelight", sans-serif;
     font-size: 5rem;
     margin-bottom: 1rem;
     margin-top: 1rem;
-    color: $color-text;
   }
 
   p {
@@ -34,57 +52,74 @@
   .btn-primary {
     align-self: center;
   }
-}
 
-.hero-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  height: 100%;
-}
+  .hero-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 
-.hero_banner_right {
-  display: flex;
-  align-items: flex-end;
-  width: 40%;
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
-  position: relative;
-}
+  .hero_content_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-.hero_image_wrapper {
-  position: relative;
+    h1,
+    a {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
+      &.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-.hero_image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1),
-    // ombre douce vers le bas
-    0px -2px 10px rgba(255, 255, 255, 0.6); // lumière subtile en haut
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  display: block;
-}
+    h1.visible {
+      transition-delay: 0.2s;
+    }
 
-.hero_texts strong {
-  font-size: 1.2rem;
-}
+    a.visible {
+      transition-delay: 0.6s;
+    }
+  }
 
-.hero_banner_left {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 4rem;
+  .hero_texts {
+    margin: 16px;
 
-  height: 100%;
-}
+    h4,
+    img {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 
-.inter_titre {
-  height: 15px;
+      &.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h4:nth-of-type(1).visible { transition-delay: 1s; }
+    img:nth-of-type(1).visible { transition-delay: 1.2s; }
+    h4:nth-of-type(2).visible { transition-delay: 1.4s; }
+    img:nth-of-type(2).visible { transition-delay: 1.6s; }
+    h4:nth-of-type(3).visible { transition-delay: 1.8s; }
+    img:nth-of-type(3).visible { transition-delay: 2s; }
+    h4:nth-of-type(4).visible { transition-delay: 2.2s; }
+  }
+
+  .inter_titre {
+    height: 15px;
+  }
 }
