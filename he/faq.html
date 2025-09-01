@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>שאלות נפוצות ועדויות - שומר הזיכרון</title>
+    <title>שאלות נפוצות ועדויות - שומר זיכרון</title>
     <link rel="stylesheet" href="../assets/scss/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,14 +19,12 @@
   <body>
     <!-- Header -->
     <header class="header">
-      <div class="logo">🎙️ שומר הזיכרון</div>
+      <div class="logo">🎙️ שומר זיכרון</div>
       <nav>
-        <a href="../index.html">דף הבית</a>
-        <a href="../index.html#about">הפרויקט</a>
-        <a href="../index.html#contact">המסלול שלי</a>
-        <a href="../index.html#contact">צור קשר</a>
+        <a href="index.html">דף הבית</a>
+        <a href="index.html#contact">צור קשר</a>
 
-        <label for="lang-switch">שפה:</label>
+        <label for="lang-switch"> שפה:</label>
         <select id="lang-switch">
           <option value="../faq.html">Français</option>
           <option value="../en/faq.html">English</option>
@@ -36,7 +34,7 @@
     </header>
 
     <section class="hero">
-      <div class="hero-content">
+      <div class="hero-top">
         <div class="hero_content_left">
           <h1>ביוגרפיות מצולמות</h1>
           <a href="#contact" class="btn-primary">הצטרפו לפרויקט</a>
@@ -45,13 +43,19 @@
         <div class="hero_texts">
           <h2>שאלות נפוצות</h2>
           <img src="../assets/img/1332805.svg" class="inter_titre" alt="" />
-          <h3>כל מה שאתם צריכים לדעת על ביוגרפיות מצולמות</h3>
+          <h3>כל מה שצריך לדעת על ביוגרפיות מצולמות</h3>
           <img src="../assets/img/1332805.svg" class="inter_titre" alt="" />
           <p>
-            כאן תמצאו תשובות לשאלות הנפוצות ביותר לגבי תהליך יצירת הביוגרפיה
+            כאן תמצאו תשובות לשאלות הנפוצות ביותר על תהליך יצירת הביוגרפיה
             המצולמת שלנו.
           </p>
         </div>
+      </div>
+      <div class="hero-bot">
+        <h4>מידע נוסף</h4>
+        <a href="#about_what">
+          <i class="fa-solid fa-angles-down"></i>
+        </a>
       </div>
     </section>
 
@@ -61,13 +65,25 @@
 
       <div class="faq-item">
         <h4 class="faq-question">
+          <i class="fa-solid fa-user"></i>
+          האם קשה לדבר מול מצלמה?
+        </h4>
+        <div class="faq-answer">
+          <p>
+            ממש לא, הראיון מונחה ברגישות ובצורה טבעית כמו שיחה אישית.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h4 class="faq-question">
           <i class="fa-solid fa-clock"></i>
           כמה זמן נמשך הצילום?
         </h4>
         <div class="faq-answer">
           <p>
-            בדרך כלל, הצילום נמשך בין שעה וחצי לשלוש שעות. זה תלוי באדם, בנושאים
-            ובסיפורו האישי.
+            בדרך כלל הצילום נמשך בין שעה וחצי לשלוש שעות. זה תלוי באדם, בנושאים
+            ובסיפורים שיבחר לשתף.
           </p>
         </div>
       </div>
@@ -75,12 +91,12 @@
       <div class="faq-item">
         <h4 class="faq-question">
           <i class="fa-solid fa-images"></i>
-          האם ניתן להוסיף תמונות?
+          האם אפשר להוסיף תמונות?
         </h4>
         <div class="faq-answer">
           <p>
-            בהחלט. ניתן לספק תמונות, סרטונים או מסמכים (מודפסים או דיגיטליים)
-            שאני משלב בעריכה. זה מעשיר את הסיפור והופך אותו לחי יותר.
+            בהחלט, ניתן לספק תמונות, סרטונים או מסמכים (מודפסים או דיגיטליים)
+            שאשלב בעריכה. זה מעשיר את הסיפור והופך אותו לחי יותר.
           </p>
         </div>
       </div>
@@ -92,8 +108,8 @@
         </h4>
         <div class="faq-answer">
           <p>
-            כן. הסרטונים מיועדים רק למשפחה ולקרובים שלכם. שום תוכן לא מופץ ללא
-            הסכמה מפורשת.
+            כן. הסרטונים מיועדים רק למשפחה וליקיריכם. שום תוכן לא מופץ ללא
+            הסכמתכם המפורשת.
           </p>
         </div>
       </div>
@@ -101,12 +117,12 @@
       <div class="faq-item">
         <h4 class="faq-question">
           <i class="fa-solid fa-calendar-days"></i>
-          תוך כמה זמן מקבלים את הסרטון?
+          תוך כמה זמן מקבלים את הסרט?
         </h4>
         <div class="faq-answer">
           <p>
-            בהתאם למורכבות העריכה, בדרך כלל זה לוקח בין 3 ל-4 שבועות לאחר
-            הצילום.
+            בהתאם למורכבות העריכה, בממוצע מקבלים את הסרט לאחר כ־3 עד 4 שבועות
+            מהצילום.
           </p>
         </div>
       </div>
@@ -114,12 +130,12 @@
       <div class="faq-item">
         <h4 class="faq-question">
           <i class="fa-solid fa-file-video"></i>
-          באיזה פורמט מקבלים את הסרט?
+          באיזה פורמט מתקבל הסרט?
         </h4>
         <div class="faq-answer">
           <p>
-            הסרטון נשלח כקישור להורדה ומועבר גם על גבי דיסק און קי בפורמט
-            אוניברסלי שניתן לצפות בו במחשב או בטלוויזיה.
+            הסרט נשלח כקישור להורדה ומועבר גם על דיסק־און־קי, בפורמט אוניברסלי
+            הניתן לצפייה במחשב או בטלוויזיה.
           </p>
         </div>
       </div>
@@ -127,11 +143,12 @@
       <div class="faq-item">
         <h4 class="faq-question">
           <i class="fa-solid fa-gift"></i>
-          האם ניתן להעניק ביוגרפיה מצולמת כמתנה?
+          האם אפשר להעניק ביוגרפיה מצולמת כמתנה?
         </h4>
         <div class="faq-answer">
           <p>
-            כמובן! משפחות רבות בוחרות להעניק את הפרויקט הזה כהפתעה להורה או לסב.
+            כמובן! משפחות רבות בוחרות להעניק פרויקט זה להורה או לסב כסמל של
+            אהבה והוקרה.
           </p>
         </div>
       </div>
@@ -144,12 +161,13 @@
       <div class="testimonial-item">
         <div class="testimonial-content">
           <p>
-            "בזכות הפרויקט הזה הצלחנו לשמר את סיפורה של סבתנו. נכדיה יכולים כעת
-            לשמוע את קולה ולגלות את מסעה המיוחד. מתנה יקרה לכל המשפחה."
+            "חזרתי לזיכרונות ילדותי, דיברתי על הוריי, על נישואיי, על ילדיי…
+            היום נכדיי יכולים לראות את הסרט הזה, לשמוע את קולי ולגלות פרקים
+            מחיי שלא היו מגלים אחרת. זה כמו להותיר להם חלק קטן ממני בירושה."
           </p>
         </div>
         <div class="testimonial-author">
-          <strong>שרה מ.</strong>
+          <strong>ז'אן, בת 78</strong>
           <span>משפחה בת 3 דורות</span>
         </div>
       </div>
@@ -157,12 +175,13 @@
       <div class="testimonial-item">
         <div class="testimonial-content">
           <p>
-            "התהליך היה טבעי ואכפתי מאוד. חששתי בהתחלה, אבל הגישה המקצועית
-            והאנושית הרגיעה אותי. התוצאה עלתה על הציפיות שלנו."
+            "תמיד אהבתי לספר סיפורים, אבל לא חשבתי שאשאיר יום אחד עדות מצולמת.
+            במהלך הראיון הרגשתי שמקשיבים לי ברגישות. הסרט הזה גרם לי להבין שמעולם
+            לא סיפרתי חלק מהפרקים בחיי, וילדיי גאים להעביר את הזיכרון הזה."
           </p>
         </div>
         <div class="testimonial-author">
-          <strong>דוד ל.</strong>
+          <strong>דוד, בן 82</strong>
           <span>ביוגרפיה אישית</span>
         </div>
       </div>
@@ -170,13 +189,13 @@
       <div class="testimonial-item">
         <div class="testimonial-content">
           <p>
-            "הענקנו את הביוגרפיה המצולמת הזו לאבינו ליום הולדתו ה-80. הוא התרגש
-            מאוד לספר על סיפור ההגירה שלו ולהעביר את ערכיו. רגע בלתי נשכח לכל
+            "הענקנו את הביוגרפיה המצולמת הזו לאבינו ליום הולדתו ה־80. הוא התרגש
+            מאוד לספר את סיפור העלייה שלו ולהעביר את ערכיו. רגע בלתי נשכח לכל
             המשפחה."
           </p>
         </div>
         <div class="testimonial-author">
-          <strong>רחל ומיכאל ק.</strong>
+          <strong>רחל ומישל ק'.</strong>
           <span>מתנה משפחתית</span>
         </div>
       </div>
@@ -185,13 +204,15 @@
     <!-- Contact -->
     <section id="contact" class="contact">
       <h2>שאלה? פרויקט?</h2>
-      <p>אתם מוזמנים ליצור קשר כדי לדון בפרויקט הביוגרפיה המצולמת שלכם.</p>
+      <p>
+        אתם מוזמנים ליצור קשר כדי לדון בפרויקט הביוגרפיה המצולמת שלכם.
+      </p>
       <form action="#" method="post">
-        <input type="text" name="name" placeholder="השם שלך" required />
+        <input type="text" name="name" placeholder="שמך" required />
         <input type="email" name="email" placeholder="האימייל שלך" required />
         <textarea
           name="message"
-          placeholder="הודעתך או שאלתך"
+          placeholder="הודעה או שאלה"
           required
         ></textarea>
         <button type="submit" class="btn-primary">שלח</button>

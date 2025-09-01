@@ -135,7 +135,12 @@
   .hero_content_left {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 1rem;
+
+
+    .fa-whatsapp{
+      font-size: 2rem;
+    }
 
     h1,
     a {
