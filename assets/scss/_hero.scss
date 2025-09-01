@@ -9,12 +9,75 @@
   align-items: flex-start;
   overflow: hidden; // pour contenir le ::before
 
+  .hero-top {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .hero-bot {
+    position: absolute;
+    flex-direction: column;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    h4,
+    a {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+      &.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h4.visible {
+      transition-delay: 2.6s; // commence après le dernier élément du haut
+    }
+
+    a.visible {
+      transition-delay: 2.8s; // la flèche arrive juste après le texte
+    }
+
+    // Nouveau : style pour le lien
+    a {
+      color: inherit;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    i {
+      font-size: 2rem;
+      animation: breathe 3s ease-in-out infinite;
+      filter: drop-shadow(0 0 8px rgba(245, 245, 220, 0.6));
+      transition: filter 0.3s ease;
+
+      &:hover {
+        filter: drop-shadow(0 0 12px rgba(245, 245, 220, 0.9));
+      }
+    }
+  }
+  // Ajoutez cette nouvelle animation à la fin de votre fichier SCSS :
+
+  @keyframes breathe {
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    50% {
+      transform: scale(1.08);
+      opacity: 1;
+    }
+  }
+
   &::before {
     content: "";
     position: absolute;
     inset: 0;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                      url("../img/materiel-photo-video-blog-vlog-79.jpg");
+      url("../img/background.jpg");
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -28,7 +91,7 @@
       transform: scale(1);
     }
     to {
-      transform: scale(1.15); 
+      transform: scale(1.15);
     }
   }
 
@@ -110,13 +173,27 @@
       }
     }
 
-    h4:nth-of-type(1).visible { transition-delay: 1s; }
-    img:nth-of-type(1).visible { transition-delay: 1.2s; }
-    h4:nth-of-type(2).visible { transition-delay: 1.4s; }
-    img:nth-of-type(2).visible { transition-delay: 1.6s; }
-    h4:nth-of-type(3).visible { transition-delay: 1.8s; }
-    img:nth-of-type(3).visible { transition-delay: 2s; }
-    h4:nth-of-type(4).visible { transition-delay: 2.2s; }
+    h4:nth-of-type(1).visible {
+      transition-delay: 1s;
+    }
+    img:nth-of-type(1).visible {
+      transition-delay: 1.2s;
+    }
+    h4:nth-of-type(2).visible {
+      transition-delay: 1.4s;
+    }
+    img:nth-of-type(2).visible {
+      transition-delay: 1.6s;
+    }
+    h4:nth-of-type(3).visible {
+      transition-delay: 1.8s;
+    }
+    img:nth-of-type(3).visible {
+      transition-delay: 2s;
+    }
+    h4:nth-of-type(4).visible {
+      transition-delay: 2.2s;
+    }
   }
 
   .inter_titre {
