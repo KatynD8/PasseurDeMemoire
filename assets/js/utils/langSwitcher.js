@@ -4,43 +4,22 @@ export function initLangSwitcher() {
   if (!switcher) return;
 
   switcher.addEventListener("change", function () {
-    const target = this.value; // ex: "index.html" ou "en/index.html"
+    const target = this.value; // ex: "index.html", "en/index.html", "he/faq.html"
     const origin = window.location.origin;
 
-    // split + filter pour ne garder que les segments non vides
+    // On récupère éventuellement le nom du repo (cas GitHub Pages Project site)
     const parts = window.location.pathname.split("/").filter(Boolean);
-    let baseSegments = [];
+    let repoName = "";
 
-    if (parts.length === 0) {
-      baseSegments = [];
-    } else {
-      const last = parts[parts.length - 1];
-      const lastIsFile = last.includes(".");
-
-      if (lastIsFile) {
-        // si le segment avant le fichier est un code langue (ex: "en", "he")
-        const prev = parts[parts.length - 2];
-        const prevIsLang = prev && /^[a-z]{2,3}$/i.test(prev);
-        baseSegments = parts.slice(0, parts.length - (prevIsLang ? 2 : 1));
-      } else {
-        // la route se termine par un dossier (ex: /repo-name/en/ ou /repo-name/)
-        const lastIsLang = /^[a-z]{2,3}$/i.test(last);
-        baseSegments = lastIsLang
-          ? parts.slice(0, parts.length - 1)
-          : parts.slice(0);
-      }
+    if (
+      parts.length > 0 &&
+      !["en", "he"].includes(parts[0]) &&
+      !parts[0].includes(".")
+    ) {
+      repoName = parts[0]; // ex: "mon-site"
     }
 
-    const basePath =
-      "/" + baseSegments.join("/") + (baseSegments.length ? "/" : "");
-    const base = origin + basePath;
-
-    // si la valeur du select est déjà absolue (/...) ou complète (http://...), on l'utilise directement
-    if (/^(\/|https?:\/\/)/i.test(target)) {
-      window.location.href = target;
-      return;
-    }
-
-    window.location.href = base + target;
+    const basePath = repoName ? `/${repoName}/` : `/`;
+    window.location.href = origin + basePath + target;
   });
 }
