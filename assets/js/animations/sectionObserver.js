@@ -12,19 +12,23 @@ function animateOnScroll(entries, observer) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("visible");
-      // observer.unobserve(entry.target); // Décommentez si l’anim doit se jouer une seule fois
+      // observer.unobserve(entry.target); // Décommentez si l'anim doit se jouer une seule fois
     }
   });
 }
 
-// Crée l’observer
+// Crée l'observer
 const scrollObserver = new IntersectionObserver(
   animateOnScroll,
   observerOptions
 );
 
-// Initialise l’observation des sections
+// Initialise l'observation des sections
 export function initSectionObserver() {
   const sections = document.querySelectorAll(".about, .contact");
-  sections.forEach((section) => scrollObserver.observe(section));
+  sections.forEach((section) => {
+    // S'assurer que les sections commencent invisibles
+    section.classList.remove("visible");
+    scrollObserver.observe(section);
+  });
 }
