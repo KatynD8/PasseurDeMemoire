@@ -11,12 +11,16 @@
 
   @include media-only($bp-phone) {
     width: 100%;
-    min-height: 1px;
+    min-height: 80dvh;
   }
 
   .hero-top {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
   }
 
   .hero-bot {
@@ -87,7 +91,7 @@
     background-repeat: no-repeat;
     z-index: 0;
     transform: scale(1);
-    animation: slowZoom 10s ease-in-out forwards;
+    animation: slowZoom 15s ease-in-out forwards;
   }
 
   @keyframes slowZoom {
@@ -105,10 +109,13 @@
   }
 
   h1 {
-    font-family: "Limelight", sans-serif;
+    font-family: "Playfair Display", serif;
     font-size: 5rem;
     margin-bottom: 1rem;
     margin-top: 1rem;
+    @include media-only($bp-phone) {
+      font-size: 2rem;
+    }
   }
 
   p {
@@ -118,6 +125,7 @@
 
   .btn-primary {
     align-self: center;
+    margin-top: 2rem;
   }
 
   .hero-content {
@@ -167,7 +175,12 @@
   }
 
   .hero_texts {
-    margin: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
 
     h4,
     img {

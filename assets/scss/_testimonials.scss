@@ -43,10 +43,14 @@
     height: 250px;
     border: 1px solid #e1e8ed;
     border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
     position: relative;
+
+    @include media-only($bp-phone) {
+      height: 350px;
+    }
   }
 
   .testimonial-card:hover {
@@ -59,7 +63,8 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 1rem;
+
+    padding: 1rem;
   }
 
   .testimonial-author {
@@ -93,12 +98,13 @@
 
   /* Contenu du témoignage */
   .testimonial-content {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
 
   .testimonial-content p {
     color: #3c4043;
-    line-height: 1.6;
+    margin: 0 10px;
+
     font-size: 0.95rem;
     font-style: italic;
     position: relative;
@@ -106,7 +112,6 @@
 
   /* Guillemets décoratifs */
   .testimonial-content p::before {
-    content: '"';
     font-size: 1.5rem;
     color: #dadce0;
     font-weight: bold;

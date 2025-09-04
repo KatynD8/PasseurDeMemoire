@@ -1,7 +1,8 @@
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
   height: 60px; // fixe
+  width: 100%;
   background: $color-accent;
   color: white;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
@@ -11,6 +12,9 @@
   padding: 0 20px;
   z-index: 100;
   margin: 0;
+  @include media-only($bp-phone) {
+    flex-direction: column;
+  }
 
   // logo à gauche
   .logo {
@@ -25,6 +29,9 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+    @include media-only($bp-phone) {
+      gap: 0px;
+    }
   }
 
   a {
