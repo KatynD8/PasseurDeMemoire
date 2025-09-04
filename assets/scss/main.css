@@ -1,4 +1,5 @@
 @charset "UTF-8";
+html,
 body {
   font-family: "Montserrat", sans-serif;
   color: #2a2a2a;
@@ -7,6 +8,15 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 h1 {
@@ -39,6 +49,21 @@ section {
 }
 .btn-primary:hover, .header a.btn-cta:hover {
   background: rgb(0, 42.8043478261, 143.2);
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .header {
@@ -95,12 +120,18 @@ section {
   position: relative;
   color: whitesmoke;
   padding: 1rem 1.5rem;
-  min-height: 75vh;
+  min-height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   overflow: hidden;
+}
+@media screen and (max-width: 800px) {
+  .hero {
+    width: 100%;
+    min-height: 1px;
+  }
 }
 .hero .hero-top {
   display: flex;
@@ -300,10 +331,20 @@ section {
 #about_me {
   flex-direction: row;
 }
+@media screen and (max-width: 800px) {
+  #about_me {
+    flex-direction: column-reverse;
+  }
+}
 
 /* About why : image à droite, texte à gauche */
 #about_why {
   flex-direction: row-reverse;
+}
+@media screen and (max-width: 800px) {
+  #about_why {
+    flex-direction: column-reverse;
+  }
 }
 #about_why .about-me_left img {
   border-top-right-radius: 8px;
@@ -397,6 +438,11 @@ section {
   /* Contenu du témoignage */
   /* Guillemets décoratifs */
   /* Badge "Vérifié" */
+}
+@media screen and (max-width: 800px) {
+  #testimonials {
+    flex-direction: column;
+  }
 }
 #testimonials .testimonials-container {
   display: flex;
@@ -569,6 +615,7 @@ section {
   background: #111;
   color: #ccc;
   font-size: 0.9rem;
+  width: 100%;
 }
 
 #faq_herobanner .hero-content {

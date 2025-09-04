@@ -30,11 +30,17 @@
 /* About me : image à gauche, texte à droite */
 #about_me {
   flex-direction: row;
+  @include media-only($bp-phone) {
+    flex-direction: column-reverse;
+  }
 }
 
 /* About why : image à droite, texte à gauche */
 #about_why {
   flex-direction: row-reverse;
+  @include media-only($bp-phone) {
+    flex-direction: column-reverse;
+  }
 
   .about-me_left {
     img {
@@ -126,6 +132,9 @@
   flex-direction: row-reverse;
   align-items: center;
   text-align: center;
+  @include media-only($bp-phone) {
+    flex-direction: column;
+  }
 
   background-color: $color-accent;
   .testimonials-container {

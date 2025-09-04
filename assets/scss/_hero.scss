@@ -2,12 +2,17 @@
   position: relative;
   color: whitesmoke;
   padding: 1rem 1.5rem;
-  min-height: 75vh;
+  min-height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   overflow: hidden; // pour contenir le ::before
+
+  @include media-only($bp-phone) {
+    width: 100%;
+    min-height: 1px;
+  }
 
   .hero-top {
     display: flex;

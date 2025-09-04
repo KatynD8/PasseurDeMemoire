@@ -1,226 +1,130 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>שאלות נפוצות ועדויות - שומר זיכרון</title>
-    <link rel="stylesheet" href="../assets/scss/main.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Limelight&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Rouge+Script&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/471665c4dc.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <!-- Header -->
-    <header class="header">
-      <div class="logo">🎙️ שומר הזיכרון</div>
-      <nav>
-        <a href="index.html">דף הבית</a>
-        <a href="index.html#contact">צור קשר</a>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Témoignages</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        <label for="lang-switch">שפה:</label>
-        <select id="lang-switch">
-          <option value="faq.html">Français</option>
-          <option value="en/faq.html">English</option>
-          <option value="he/faq.html" selected>עברית</option>
-        </select>
-      </nav>
-    </header>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
 
-    <section class="hero">
-      <div class="hero-top">
-        <div class="hero_content_left">
-          <h1>ביוגרפיות מצולמות</h1>
-          <a href="#contact" class="btn-primary">הצטרפו לפרויקט</a>
-        </div>
+        .about {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.9s ease;
+            margin: 50px auto;
+            max-width: 1200px;
+            overflow: hidden;
+        }
 
-        <div class="hero_texts">
-          <h2>שאלות נפוצות</h2>
-          <img src="../assets/img/1332805.svg" class="inter_titre" alt="" />
-          <h3>כל מה שצריך לדעת על ביוגרפיות מצולמות</h3>
-          <img src="../assets/img/1332805.svg" class="inter_titre" alt="" />
-          <p>
-            כאן תמצאו תשובות לשאלות הנפוצות ביותר על תהליך יצירת הביוגרפיה
-            המצולמת שלנו.
-          </p>
-        </div>
-      </div>
-      <div class="hero-bot">
-        <h4>מידע נוסף</h4>
-        <a href="#about_what">
-          <i class="fa-solid fa-angles-down"></i>
-        </a>
-      </div>
-    </section>
+        .about.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-    <!-- FAQ Section -->
-    <section id="faq" class="about">
-      <h3>שאלות נפוצות</h3>
+        /* Section principale */
+        #testimonials {
+            display: flex;
+            flex-direction: row-reverse;
+        }
 
-      <div class="faq-item">
-        <h4 class="faq-question">
-          <i class="fa-solid fa-user"></i>
-          האם קשה לדבר מול מצלמה?
-        </h4>
-        <div class="faq-answer">
-          <p>ממש לא, הראיון מונחה ברגישות ובצורה טבעית כמו שיחה אישית.</p>
-        </div>
-      </div>
+        .about-me_left {
+            flex: 0.4;
+        }
 
-      <div class="faq-item">
-        <h4 class="faq-question">
-          <i class="fa-solid fa-clock"></i>
-          כמה זמן נמשך הצילום?
-        </h4>
-        <div class="faq-answer">
-          <p>
-            בדרך כלל הצילום נמשך בין שעה וחצי לשלוש שעות. זה תלוי באדם, בנושאים
-            ובסיפורים שיבחר לשתף.
-          </p>
-        </div>
-      </div>
+        .about-me_left img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
 
-      <div class="faq-item">
-        <h4 class="faq-question">
-          <i class="fa-solid fa-images"></i>
-          האם אפשר להוסיף תמונות?
-        </h4>
-        <div class="faq-answer">
-          <p>
-            בהחלט, ניתן לספק תמונות, סרטונים או מסמכים (מודפסים או דיגיטליים)
-            שאשלב בעריכה. זה מעשיר את הסיפור והופך אותו לחי יותר.
-          </p>
-        </div>
-      </div>
+        .about-me_right {
+            flex: 0.6;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+        }
 
-      <div class="faq-item">
-        <h4 class="faq-question">
-          <i class="fa-solid fa-lock"></i>
-          האם הסרטונים חסויים?
-        </h4>
-        <div class="faq-answer">
-          <p>
-            כן. הסרטונים מיועדים רק למשפחה וליקיריכם. שום תוכן לא מופץ ללא
-            הסכמתכם המפורשת.
-          </p>
-        </div>
-      </div>
+        .about-me_right h3 {
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+            font-weight: 300;
+            text-align: center;
+        }
 
-      <div class="faq-item">
-        <h4 class="faq-question">
-          <i class="fa-solid fa-calendar-days"></i>
-          תוך כמה זמן מקבלים את הסרט?
-        </h4>
-        <div class="faq-answer">
-          <p>
-            בהתאם למורכבות העריכה, בממוצע מקבלים את הסרט לאחר כ־3 עד 4 שבועות
-            מהצילום.
-          </p>
-        </div>
-      </div>
+        /* Container des témoignages */
+    
 
-      <div class="faq-item">
-        <h4 class="faq-question">
-          <i class="fa-solid fa-file-video"></i>
-          באיזה פורמט מתקבל הסרט?
-        </h4>
-        <div class="faq-answer">
-          <p>
-            הסרט נשלח כקישור להורדה ומועבר גם על דיסק־און־קי, בפורמט אוניברסלי
-            הניתן לצפייה במחשב או בטלוויזיה.
-          </p>
-        </div>
-      </div>
+        /* Scrollbar personnalisée */
+        .testimonials-container::-webkit-scrollbar {
+            width: 6px;
+        }
 
-      <div class="faq-item">
-        <h4 class="faq-question">
-          <i class="fa-solid fa-gift"></i>
-          האם אפשר להעניק ביוגרפיה מצולמת כמתנה?
-        </h4>
-        <div class="faq-answer">
-          <p>
-            כמובן! משפחות רבות בוחרות להעניק פרויקט זה להורה או לסב כסמל של אהבה
-            והוקרה.
-          </p>
-        </div>
-      </div>
-    </section>
+        .testimonials-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 3px;
+        }
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="about">
-      <h3>מה הלקוחות שלנו אומרים</h3>
+        .testimonials-container::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 3px;
+        }
 
-      <div class="testimonial-item">
-        <div class="testimonial-content">
-          <p>
-            "חזרתי לזיכרונות ילדותי, דיברתי על הוריי, על נישואיי, על ילדיי… היום
-            נכדיי יכולים לראות את הסרט הזה, לשמוע את קולי ולגלות פרקים מחיי שלא
-            היו מגלים אחרת. זה כמו להותיר להם חלק קטן ממני בירושה."
-          </p>
-        </div>
-        <div class="testimonial-author">
-          <strong>ז'אן, בת 78</strong>
-          <span>משפחה בת 3 דורות</span>
-        </div>
-      </div>
+        .testimonials-container::-webkit-scrollbar-thumb:hover {
+            background: #a8a8a8;
+        }
 
-      <div class="testimonial-item">
-        <div class="testimonial-content">
-          <p>
-            "תמיד אהבתי לספר סיפורים, אבל לא חשבתי שאשאיר יום אחד עדות מצולמת.
-            במהלך הראיון הרגשתי שמקשיבים לי ברגישות. הסרט הזה גרם לי להבין
-            שמעולם לא סיפרתי חלק מהפרקים בחיי, וילדיי גאים להעביר את הזיכרון
-            הזה."
-          </p>
-        </div>
-        <div class="testimonial-author">
-          <strong>דוד, בן 82</strong>
-          <span>ביוגרפיה אישית</span>
-        </div>
-      </div>
+   
 
-      <div class="testimonial-item">
-        <div class="testimonial-content">
-          <p>
-            "הענקנו את הביוגרפיה המצולמת הזו לאבינו ליום הולדתו ה־80. הוא התרגש
-            מאוד לספר את סיפור העלייה שלו ולהעביר את ערכיו. רגע בלתי נשכח לכל
-            המשפחה."
-          </p>
-        </div>
-        <div class="testimonial-author">
-          <strong>רחל ומישל ק'.</strong>
-          <span>מתנה משפחתית</span>
-        </div>
-      </div>
-    </section>
+        /* Responsive */
+        @media (max-width: 768px) {
+            #testimonials {
+                flex-direction: column;
+            }
 
-    <!-- Contact -->
-    <section id="contact" class="contact">
-      <h2>שאלה? פרויקט?</h2>
-      <p>אתם מוזמנים ליצור קשר כדי לדון בפרויקט הביוגרפיה המצולמת שלכם.</p>
-      <form action="#" method="post">
-        <input type="text" name="name" placeholder="שמך" required />
-        <input type="email" name="email" placeholder="האימייל שלך" required />
-        <textarea
-          name="message"
-          placeholder="הודעה או שאלה"
-          required
-        ></textarea>
-        <button type="submit" class="btn-primary">שלח</button>
-      </form>
-    </section>
+            .about-me_left {
+                flex: none;
+                height: 200px;
+                order: 2;
+            }
 
-    <!-- Footer -->
-    <footer class="footer">
-      <p>© 2025 עדויות – כל הזכויות שמורות.</p>
-    </footer>
+            .about-me_right {
+                padding: 2rem;
+                order: 1;
+            }
 
-    <script type="module" src="../assets/js/main.js"></script>
-  </body>
-</html>
+            .about-me_right h3 {
+                font-size: 1.8rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .testimonials-container {
+                max-height: none;
+                overflow-y: visible;
+            }
+
+            .testimonial-card {
+                padding: 1.25rem;
+            }
+
+            .testimonial-header {
+                flex-direction: column;
+                gap: 0.5rem;
+                align-items: flex-start;
+            }
+        }
