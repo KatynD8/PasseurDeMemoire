@@ -7,7 +7,7 @@
   opacity: 0;
   transform: translateY(40px);
   transition: all 0.9s ease;
-  margin: 50px;
+  // margin: 50px;
   @include media-only($bp-phone) {
     margin: 0px;
     border-radius: 0px;
@@ -60,7 +60,12 @@
 .about-me_right {
   flex: 1; // occupe 50% de l’espace
   padding: 2rem 2rem;
-  background-color: $color-accent;
+  background: #0037b8;
+  background: linear-gradient(
+    270deg,
+    rgba(0, 55, 184, 1) 50%,
+    rgba(20, 94, 184, 1) 100%
+  );
   color: $color-bg;
   text-align: left;
 }
@@ -80,7 +85,9 @@
 }
 
 #about_how {
-  background-color: $color-accent;
+  background-color: #f9f9f9;
+  width: 100%;
+  padding: 2rem 2rem;
   .process-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

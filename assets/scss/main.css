@@ -333,7 +333,6 @@ iframe {
   opacity: 0;
   transform: translateY(40px);
   transition: all 0.9s ease;
-  margin: 50px;
 }
 @media screen and (max-width: 800px) {
   .about {
@@ -388,7 +387,8 @@ iframe {
 .about-me_right {
   flex: 1;
   padding: 2rem 2rem;
-  background-color: #0037b8;
+  background: #0037b8;
+  background: linear-gradient(270deg, rgb(0, 55, 184) 50%, rgb(20, 94, 184) 100%);
   color: #f7f5f1;
   text-align: left;
 }
@@ -408,7 +408,9 @@ iframe {
 }
 
 #about_how {
-  background-color: #0037b8;
+  background-color: #f9f9f9;
+  width: 100%;
+  padding: 2rem 2rem;
 }
 #about_how .process-grid {
   display: grid;
