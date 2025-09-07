@@ -14,3 +14,25 @@ $bp-phone: 800px;
     @content;
   }
 }
+
+@font-face {
+  font-family: "Raluweh";
+  src: url("../fonts/RALUWEH-h1.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Souvenir";
+  src: url("../fonts/Souvenir.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SouvenirI";
+  src: url("../fonts/SouvenirI.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SouvenirBI";
+  src: url("../fonts/SouvenirBI.ttf") format("truetype");
+}
