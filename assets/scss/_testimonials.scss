@@ -1,147 +1,163 @@
 .testimonials_title {
-  justify-content: center;
   text-align: center;
   color: $color-bg;
+  background: linear-gradient(
+    270deg,
+    rgba(0, 55, 184, 1) 50%,
+    rgba(20, 94, 184, 1) 100%
+  );
+  margin: 0;
+  padding: 0;
+
+  h3 {
+    padding: 1rem;
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
 }
+
 #testimonials {
-  flex-direction: row-reverse;
-  align-items: center;
-  text-align: center;
-  @include media-only($bp-phone) {
-    flex-direction: column;
-  }
-
   background-color: $color-accent;
-  .testimonials-container {
+  padding: 3rem 2rem;
+  position: relative;
+  flex-direction: row;
+  gap: 20px;
+  display: flex;
+  align-items: stretch;
+
+  img {
+    border-radius: 8px;
+  }
+
+  .testimonials-wrapper {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-self: center;
+
     gap: 1.5rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
 
-    overflow-y: auto;
-    padding-right: 10px;
+    /* Masquer scrollbar */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none; /* IE/Edge */
+    scrollbar-width: none; /* Firefox */
   }
 
-  .about-me_left {
+  .testimonials-left {
+    flex: 0 0 30%; // colonne fixe à 30% de largeur
     display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding: 2rem 2rem;
-    gap: 2rem;
-  }
+    justify-content: center;
+    align-items: center;
 
-  .about-me_right {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding: 2rem 2rem;
-    gap: 2rem;
-  }
-
-  /* Carte de témoignage */
-  .testimonial-card {
-    background: #fff;
-    height: 250px;
-    border: 1px solid #e1e8ed;
-    border-radius: 12px;
-
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-    position: relative;
-
-    @include media-only($bp-phone) {
-      height: 350px;
+    img {
+      width: 100%; // prend toute la largeur dispo
+      height: 100%; // prend toute la hauteur de la colonne
+      object-fit: contain; // l’image garde son ratio sans être coupée
+      border-radius: 12px;
     }
   }
 
-  .testimonial-card:hover {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-    transform: translateY(-2px);
+  .testimonials-right {
+    flex: 1 1 70%; // colonne qui s’adapte
+    display: flex;
+    flex-direction: column;
+    position: relative;
   }
 
-  /* Header de la carte avec étoiles et nom */
+  /* Carte témoignage */
+  .testimonial-card {
+    background: #fff;
+    min-width: 350px;
+    max-width: 500px;
+    border: 1px solid #e1e8ed;
+    border-radius: 12px;
+    padding: 1.5rem;
+    flex-shrink: 0;
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      transform: translateY(-2px);
+    }
+  }
+
+  /* Header carte */
   .testimonial-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-
-    padding: 1rem;
+    margin-bottom: 1rem;
   }
 
   .testimonial-author {
     display: flex;
     flex-direction: column;
+
+    strong {
+      font-size: 1rem;
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+
+    span {
+      font-size: 0.85rem;
+      color: #70757a;
+    }
   }
 
-  .testimonial-author strong {
-    font-size: 1rem;
-    color: #1a1a1a;
-    margin-bottom: 0.25rem;
-    font-weight: 600;
-  }
-
-  .testimonial-author span {
-    font-size: 0.85rem;
-    color: #70757a;
-    font-weight: normal;
-  }
-
-  /* Étoiles */
   .testimonial-rating {
     display: flex;
     gap: 2px;
+
+    .star {
+      color: #fbbc04;
+      font-size: 1rem;
+    }
   }
 
-  .star {
-    color: #fbbc04;
-    font-size: 1rem;
-  }
-
-  /* Contenu du témoignage */
+  /* Contenu témoignage */
   .testimonial-content {
-    margin-top: 0.5rem;
+    p {
+      color: #3c4043;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      font-style: italic;
+      margin: 0;
+    }
   }
 
-  .testimonial-content p {
-    color: #3c4043;
-    margin: 0 10px;
-
-    font-size: 0.95rem;
-    font-style: italic;
-    position: relative;
-  }
-
-  /* Guillemets décoratifs */
-  .testimonial-content p::before {
-    font-size: 1.5rem;
-    color: #dadce0;
-    font-weight: bold;
+  /* Flèches navigation */
+  .scroll-controls {
     position: absolute;
-    left: -0.5rem;
-    top: -0.2rem;
+    bottom: 0;
+
+    display: flex;
+    gap: 0.5rem; /* espacement entre les 2 boutons */
   }
 
-  .testimonial-content p::after {
-    content: '"';
-    font-size: 1.5rem;
-    color: #dadce0;
-    font-weight: bold;
-  }
-
-  /* Badge "Vérifié" */
-  .verified-badge {
-    display: inline-flex;
+  .scroll-btn {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 0.25rem;
-    background: #e8f5e8;
-    color: #137333;
-    font-size: 0.75rem;
-    padding: 0.25rem 0.5rem;
-    border-radius: 12px;
-    font-weight: 500;
-    margin-top: 0.5rem;
-  }
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #333;
+    transition: background 0.2s;
 
-  .verified-icon {
-    font-size: 0.75rem;
+    &:hover {
+      background: #f5f5f5;
+    }
   }
 }

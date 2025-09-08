@@ -6,16 +6,24 @@
   padding: 3rem 2rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 
-  display: flex; // active flexbox
-  flex-direction: column; // contenu en colonne
-  justify-content: center; // centre verticalement
-  align-items: center; // centre horizontalement
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: $color-accent;
+    text-align: center;
+  }
 
   form {
     width: 70%;
     display: flex;
     flex-direction: column;
-    align-items: center; // centre les inputs dans le form
+    align-items: center;
 
     input,
     textarea {
@@ -25,40 +33,71 @@
       border-radius: 5px;
       font-size: 1rem;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
 
       &:focus {
         border-color: $color-accent;
+        outline: none;
       }
     }
 
-    // Ajustements spécifiques
     input[name="name"],
     input[name="email"] {
-      width: 60%;
       max-width: 400px;
     }
 
     textarea[name="message"] {
       min-height: 200px;
-      width: 80%;
       resize: vertical;
     }
 
-    button {
-      align-self: center;
+    .form-buttons {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      width: 100%; // s’étend sur toute la largeur du formulaire
+      justify-content: center;
+
+      .btn-primary,
+      .whatsapp {
+        flex: 1; // prend toute la place disponible
+        max-width: 200px; // limite la largeur si tu veux éviter qu’ils s’étirent trop
+        text-align: center; // centre le texte/icône
+        padding: 1rem;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary {
+        background: transparent;
+        border: 2px solid $color-accent;
+        color: $color-accent;
+
+        &:hover {
+          background: $color-accent;
+          color: white;
+          box-shadow: 0 4px 15px rgba(0, 55, 184, 0.2);
+        }
+      }
+
+      .whatsapp {
+        color: $color-accent;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        i {
+          margin-right: 0.5rem;
+        }
+
+        &:hover {
+          background: #1fd366;
+        }
+      }
     }
   }
-
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.9s ease;
-
-  &.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fa-whatsapp {
-  margin-top: 1rem;
 }

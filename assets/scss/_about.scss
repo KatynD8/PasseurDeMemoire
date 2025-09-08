@@ -2,7 +2,7 @@
 
 .about {
   background: #fff;
-  border-radius: 8px;
+
   padding: 0;
 
   opacity: 0;
@@ -25,6 +25,13 @@
 #about_why,
 #testimonials {
   display: flex;
+  .testimonials_title {
+    background: linear-gradient(
+      270deg,
+      rgba(0, 55, 184, 1) 50%,
+      rgba(20, 94, 184, 1) 100%
+    );
+  }
 }
 
 #about_what,
@@ -39,6 +46,13 @@
   @include media-only($bp-phone) {
     flex-direction: column-reverse;
   }
+  .about-me_right {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 55, 184, 1) 50%,
+      rgba(20, 94, 184, 1) 100%
+    );
+  }
 }
 
 /* About why : image à droite, texte à gauche */
@@ -47,10 +61,6 @@
 
   @include media-only($bp-phone) {
     flex-direction: column-reverse;
-  }
-
-  .about-me_left img {
-    border-radius: 0 8px 8px 0;
   }
 }
 
@@ -77,7 +87,6 @@
     height: 100%;
     object-fit: cover;
     display: block;
-    border-radius: 8px;
   }
 }
 
@@ -85,6 +94,10 @@
 #about_how {
   background-color: #f9f9f9;
   padding: 2rem;
+
+  i {
+    color: $color-accent;
+  }
 
   h3 {
     text-align: center;
@@ -128,8 +141,8 @@
   /* Vidéos mises en avant */
   .videos-highlight {
     display: flex;
-    align-items: stretch;
-    position: relative;
+    flex-direction: row;
+    gap: 20px;
     min-height: 500px;
 
     // Cartes vidéo
@@ -137,6 +150,7 @@
       flex: 1;
       position: relative;
       overflow: hidden;
+      border-radius: 8px;
 
       img {
         width: 100%;
@@ -162,6 +176,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        text-align: left;
         padding: 2rem 3rem;
         color: white;
 
@@ -227,11 +242,6 @@
         color: $color-accent;
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         transition: all 0.3s ease;
-
-        &:hover {
-          transform: scale(1.1);
-          box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
-        }
       }
     }
 
@@ -254,6 +264,9 @@
 
         .btn {
           animation-delay: 0.6s;
+        }
+        h4 {
+          color: white;
         }
       }
     }
@@ -322,19 +335,35 @@
     font-size: 1.8rem;
     color: #0037b8;
   }
+  h4 {
+    font-family: "SouvenirI";
+  }
 
   .faq-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
   }
 
   .faq-card {
+    .faq-card-title {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      align-items: center;
+
+      i {
+        transform: translateY(50%);
+      }
+    }
     background: #fff;
     border-radius: 10px;
-    padding: 1.5rem;
+    padding: 1rem;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 400px;
 
     &:hover {
       transform: translateY(-5px);

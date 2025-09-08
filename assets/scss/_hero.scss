@@ -9,6 +9,10 @@
   align-items: flex-start;
   overflow: hidden; // pour contenir le ::before
 
+  h4 {
+    color: white;
+  }
+
   @include media-only($bp-phone) {
     width: 100%;
     min-height: 80dvh;

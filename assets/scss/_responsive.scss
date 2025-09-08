@@ -1,0 +1,43 @@
+.header {
+  @include media-only($bp-phone) {
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+    .logo {
+      display: none;
+    }
+    justify-content: center;
+    label {
+      display: none;
+    }
+  }
+}
+
+.pricing-grid {
+  @include media-only($bp-phone) {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+#testimonials {
+  @include media-only($bp-phone) {
+    flex-direction: column;
+
+    .testimonials-wrapper {
+      flex-direction: column;
+    }
+
+    .scroll-controls {
+      display: none;
+    }
+  }
+}
+
+.hero {
+  @include media-only($bp-phone) {
+    &::before {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../img/background_mobile.jpg");
+    }
+  }
+}
