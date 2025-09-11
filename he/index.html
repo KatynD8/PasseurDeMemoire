@@ -3,14 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>פרויקט עדויות</title>
+    <title>פרויקט סיפורי חיים</title>
     <link rel="stylesheet" href="../assets/scss/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Montserrat:wght@100..900&display=swap"
       rel="stylesheet"
     />
     <script
@@ -21,16 +19,18 @@
   <body>
     <!-- Header -->
     <header class="header">
-      <div class="logo">🎙️ שומר הזיכרון</div>
+      <div class="logo">
+        <a href="../index.html">🎙️ שומר הזיכרון</a>
+      </div>
       <nav>
-        <a href="about_faq.html">שאלות נפוצות, מידע ועדויות</a>
+        <a href="#about_faq">מידע</a>
         <a href="#contact">צור קשר</a>
 
-        <label for="lang-switch">שפה:</label>
+        <label for="lang-switch"> שפה:</label>
         <select id="lang-switch">
-          <option value="index.html">Français</option>
-          <option value="en/index.html">English</option>
-          <option value="he/index.html" selected>עברית</option>
+          <option value="../index.html">Français</option>
+          <option value="../en/index.html">English</option>
+          <option value="index.html" selected>עברית</option>
         </select>
       </nav>
     </header>
@@ -39,19 +39,19 @@
       <div class="hero-top">
         <div class="hero_content_left">
           <h1>ביוגרפיות מצולמות</h1>
-          <a href="#contact" class="btn-primary">הצטרפו לפרויקט</a>
         </div>
 
         <div class="hero_texts">
-          <h4>מורשת עבור יקיריכם</h4>
+          <h4>מורשת לדורות הבאים</h4>
           <img src="../assets/img/1332805.svg" class="inter_titre" alt="" />
-          <h4>זיכרון חי שמחבר בין אנשים</h4>
+          <h4>זיכרון חי המחבר בין אנשים</h4>
           <img src="../assets/img/1332805.svg" class="inter_titre" alt="" />
-          <h4>להשראה, עדות להיסטוריה</h4>
+          <h4>להשראה ולשמירת ההיסטוריה</h4>
           <img src="../assets/img/1332805.svg" class="inter_titre" alt="" />
           <h4>להקשיב, להבין ולהעביר הלאה</h4>
         </div>
       </div>
+      <a href="#contact" class="btn-primary">הצטרפו לפרויקט</a>
       <div class="hero-bot">
         <h4>גלו את הפרויקט</h4>
         <a href="#about_what">
@@ -61,54 +61,99 @@
     </section>
 
     <!-- About -->
-
-    <section id="about_what" class="about">
-      <h3>הרעיון של ביוגרפיה מצולמת</h3>
-      <p>
-        לספר את חייכם, את חיי הוריכם, אחיכם ואחיותיכם… ארץ המוצא שלכם, זיכרונות
-        הילדות, חייכם המשפחתיים והמקצועיים, סיפור העלייה שלכם… משום שאינכם רק
-        אבא או אמא, סבא או סבתא… ביוגרפיה מצולמת היא מתנת זיכרון שמחברת בין
-        הדורות.
-      </p>
-    </section>
     <section id="about_why" class="about">
       <div class="about-me_left">
         <img src="../assets/img/aboutwhy.jpg" alt="" />
       </div>
       <div class="about-me_right">
-        <h3>למה לעשות ביוגרפיה מצולמת?</h3>
+        <h3>מהי ביוגרפיה מצולמת?</h3>
         <p>
-          כדי להעביר את זיכרונותיכם בתמונות, לשתף את קולכם עם יקיריכם והדורות
-          הבאים. הדבר אפשרי וקל עם סרט ביוגרפי של 30 עד 60 דקות הכולל תמונות או
-          סרטונים. מתוך ראיון תוכלו לספר באופן אותנטי את זיכרונותיכם, ערכיכם
-          וסיפור חייכם. זה חשוב לשימור הזיכרון שלכם ולחיזוק הקשרים הבין־דוריים.
-          האם סיפרתם אי פעם את סיפור האהבה שלכם? את דרככם המקצועית, את תחביביכם,
-          את מחויבויותיכם? רבים אומרים שהם מצטערים שלא נשארו להם זיכרונות
-          מצולמים מהוריהם או מסביהם. ובעיקר – הקול שלהם… הדבר אפשרי בזכות איש
-          מקצוע שמציע להעביר את זיכרונותיכם ורגשותיכם דרך ביוגרפיה מצולמת.
+          האם אי פעם רציתם לספר את סיפור חייכם או של קרוב משפחה? לשתף את
+          ילדותכם, המקצוע שלכם או סיפור העלייה לארץ? חייכם מלאים בחוויות עשירות
+          ומרגשות.
+        </p>
+        <p>ביוגרפיה מצולמת היא מורשת שמחברת בין דורות.</p>
+        <h3>למה לעשות אחת?</h3>
+        <p>
+          הסיפור שלכם ראוי שישותף עם הקרובים אליכם. שמירת הזיכרון מחזקת את
+          הקשרים הבין־דוריים.
+        </p>
+        <p>
+          באמצעות סרט באורך 30–60 דקות, תוכלו להעביר את זיכרונותיכם בתמונות,
+          בשילוב תמונות או סרטונים אישיים.
+        </p>
+        <p>
+          שתפו את הערכים, התחביבים והחוויות שלכם בקולכם – בצורה אמיתית ואישית.
         </p>
       </div>
     </section>
 
     <section id="about_how" class="about">
-      <h3>איך זה מתבצע?</h3>
-      <p></p>
-      <h5>פגישה והכנה</h5>
-      אני פוגש אתכם בפעם הראשונה כדי להציג את עצמי, להכיר אתכם ולהכין את הראיון.
-      יחד נחליט אילו נושאים ושאלות תרצו לשלב. נחליט על הסיפור שתרצו לספר ועל
-      הרגעים החשובים שתבחרו לשתף. נבחן יחד תמונות או מסמכים שתרצו לשלב בעדות
-      שלכם.
-      <h5>צילומים במקום שתבחרו</h5>
-      הצילומים יכולים להתקיים בביתכם או בחוץ במקום שיקר ללבכם. במהלך הצילום אתעד
-      את סיפור חייכם דרך ראיון מול מצלמה. זהו רגע אינטימי ומיוחד עבורכם שתחלקו
-      עם יקיריכם. התהליך נעשה תמיד ברגישות ותוך כיבוד מלא של רצונותיכם כפי
-      שהובאו בפגישה הראשונה.
-      <h5>עריכה ומסירת הסרט</h5>
-      לאחר הראיון אני עורך את הביוגרפיה המצולמת בהתאם לחזון שהגדרנו יחד, כדי
-      ליצור סיפור אותנטי וכן. תוכלו גם לבחור מוזיקה או תמונות שתרצו לשלב בסרטון.
-      הביוגרפיה המצולמת תימסר לכם כעבור מספר שבועות כקישור להורדה או על גבי
-      דיסק־און־קי, לצפייה במחשב או בטלוויזיה.
+      <h3>איך אני מלווה אתכם?</h3>
+
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-icon">
+            <i class="fa-solid fa-people-arrows"></i>
+          </div>
+          <h4>פגישה והכנה</h4>
+          <p>
+            לפני הראיון נתחיל במפגש ראשון (שעתיים עד ארבע שעות, במקום שנוח לכם)
+            כדי לקבוע יחד את הנושאים, השאלות והחומרים שתרצו לשתף.
+          </p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-icon"><i class="fa-solid fa-panorama"></i></div>
+          <h4>צילום במקום שתבחרו</h4>
+          <p>
+            אני מתעד את סיפור חייכם דרך ראיון שיכול להתקיים בבית, בטבע או במקום
+            משמעותי עבורכם (חצי יום). זהו רגע אישי ומרגש שתוכלו לחלוק אחר כך עם
+            משפחתכם.
+          </p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-icon"><i class="fa-solid fa-desktop"></i></div>
+          <h4>עריכה ומסירת הסרט</h4>
+          <p>
+            לאחר הראיון, אני עורך את הסרט בעזרת תמונות ומסמכים שתספקו. הסרט
+            יימסר תוך מספר שבועות כקישור להורדה או על גבי דיסק־און־קי.
+          </p>
+        </div>
+      </div>
+
+      <!-- 🔹 Video Section -->
+      <div class="videos-highlight">
+        <div class="video-card">
+          <img src="../assets/img/iStock-501061488.jpg" alt="סיפור אישי" />
+          <div class="video-overlay">
+            <h4>עדות אישית</h4>
+            <p>
+              ספרו את סיפור חייכם, החוויות והערכים שלכם כדי להעניק השראה ולשמר
+              מורשת יקרה.
+            </p>
+            <a href="#" class="btn-primary">לגלות</a>
+          </div>
+        </div>
+        <div class="about-divider">
+          <i class="fas fa-video"></i>
+        </div>
+
+        <div class="video-card">
+          <img src="../assets/img/PIC12655.jpg" alt="סיפור משפחתי" />
+          <div class="video-overlay">
+            <h4>עדות קבוצתית</h4>
+            <p>
+              שתפו את סיפור המשפחה, הקהילה או החברים שלכם כדי לחזק את הקשרים
+              ולשמר את הזיכרון הקולקטיבי.
+            </p>
+            <a href="#" class="btn-primary">לגלות</a>
+          </div>
+        </div>
+      </div>
     </section>
+
     <section id="about_me" class="about">
       <div class="about-me_left">
         <img src="../assets/img/aboutme.jpg" alt="" />
@@ -116,33 +161,221 @@
       <div class="about-me_right">
         <h3>מי אני?</h3>
         <p>
-          שומר זיכרון ואדם מלא תשוקה. הייתה לי קריירה ראשונה בצרפת בעולם
-          הקמעונאות וההכשרה. כשהגעתי לישראל חזרתי ללימודים באוניברסיטה העברית
-          בירושלים כדי להפוך למדריך טיולים. אני נלהב מהעברת ההיסטוריה של ישראל
-          והעולם היהודי, ובשנים האחרונות אני גם פרשן טלוויזיה לנושאים הקשורים
-          בכך. תמיד הניעה אותי הרצון להעביר ולשתף. "שומר זיכרון" הוא המשך טבעי
-          לרצון הזה – בגישה אנושית, בהקשבה ובתחושת קשר מעולה עם אנשים. אני מונע
-          על ידי סקרנות אמיתית, מלאת טוב לב. לצלם, לקצב, לספר – אני אוהב להפוך
-          סיפור לרגש משותף.
+          שמי ז'רום האס, מספר סיפורים מלא תשוקה! התחלתי בתחום הקמעונאות וההדרכה
+          בצרפת, וכשהגעתי לישראל הפכתי למדריך תיירות ולמנחה טלוויזיה. אני אוהב
+          לשתף את ההיסטוריה של ישראל והעולם היהודי כבר שנים רבות.
         </p>
+        <p>
+          בזכות סקרנות אמיתית ואמפתיה, תמיד נמשכתי לחיבור עם אנשים ולשיתוף
+          חוויות. להפוך ל"שומר זיכרון" שמספר סיפורי חיים בגישה אנושית – זהו
+          ייעוד עבורי.
+        </p>
+        <p>לצלם, לערוך, לספר: אני אוהב להפוך סיפור לרגש משותף.</p>
+      </div>
+    </section>
+
+    <section id="about_faq" class="about">
+      <h3>שאלות נפוצות</h3>
+      <div class="faq-grid">
+        <div class="faq-card">
+          <div class="faq-card-title">
+            <i class="fa-solid fa-user faq-icon"></i>
+            <h4>האם קשה לדבר מול מצלמה?</h4>
+          </div>
+          <p>ממש לא. הראיון מונחה ברוגע ובטבעיות, כמו שיחה נעימה.</p>
+        </div>
+
+        <div class="faq-card">
+          <div class="faq-card-title">
+            <i class="fa-solid fa-clock faq-icon"></i>
+            <h4>כמה זמן נמשך הצילום?</h4>
+          </div>
+          <p>לרוב בין שעה וחצי לשלוש שעות, תלוי בעושר הסיפור ובמרואיין.</p>
+        </div>
+
+        <div class="faq-card">
+          <div class="faq-card-title">
+            <i class="fa-solid fa-images faq-icon"></i>
+            <h4>אפשר לשלב תמונות?</h4>
+          </div>
+          <p>בהחלט! ניתן לשלב תמונות, סרטונים או מסמכים בעריכה.</p>
+        </div>
+
+        <div class="faq-card">
+          <div class="faq-card-title">
+            <i class="fa-solid fa-lock faq-icon"></i>
+            <h4>האם הסרטים חסויים?</h4>
+          </div>
+          <p>כן, הם מיועדים רק למשפחה ולקרובים – אלא אם תסכימו לשתף אותם.</p>
+        </div>
+
+        <div class="faq-card">
+          <div class="faq-card-title">
+            <i class="fa-solid fa-calendar-days faq-icon"></i>
+            <h4>מתי מקבלים את הסרט?</h4>
+          </div>
+          <p>בממוצע 3–4 שבועות לאחר הצילום, בהתאם למורכבות העריכה.</p>
+        </div>
+
+        <div class="faq-card">
+          <div class="faq-card-title">
+            <i class="fa-solid fa-file-video faq-icon"></i>
+            <h4>באיזה פורמט מתקבל הסרט?</h4>
+          </div>
+          <p>הסרט נמסר כקישור להורדה וגם על דיסק־און־קי בפורמט אוניברסלי.</p>
+        </div>
+
+        <div class="faq-card">
+          <div class="faq-card-title">
+            <i class="fa-solid fa-file-video faq-icon"></i>
+            <h4>האם ניתן לצלם ביוגרפיות בישראל?</h4>
+          </div>
+          <p>כן, אני מגיע לפגישה ולראיון בטווח של 100 ק"מ מתל אביב.</p>
+        </div>
+
+        <div class="faq-card">
+          <div class="faq-card-title">
+            <i class="fa-solid fa-gift faq-icon"></i>
+            <h4>אפשר לתת ביוגרפיה מצולמת כמתנה?</h4>
+          </div>
+          <p>
+            כמובן! משפחות רבות מעניקות את הפרויקט הזה כהפתעה להורים או לסבים.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="testimonials_title">
+      <h3>מה הלקוחות אומרים</h3>
+    </div>
+
+    <section id="testimonials">
+      <div class="testimonials-left">
+        <img src="../assets/img/iStock-1303297556.jpg" alt="" />
+      </div>
+      <div class="testimonials-right">
+        <div class="testimonials-wrapper">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-author">
+                <strong>דוד ל.</strong>
+                <span>ביוגרפיה אישית • לפני חודש</span>
+              </div>
+              <div class="testimonial-rating">
+                <span class="star">★</span><span class="star">★</span
+                ><span class="star">★</span><span class="star">★</span
+                ><span class="star">★</span>
+              </div>
+            </div>
+            <div class="testimonial-content">
+              <p>
+                תמיד אהבתי לספר סיפורים, אבל לא חשבתי שאשאיר עדות מצולמת. במהלך
+                הראיון הרגשתי שמקשיבים לי באכפתיות...
+              </p>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-author">
+                <strong>ג'אן מ.</strong>
+                <span>משפחה בת 3 דורות • לפני חודשיים</span>
+              </div>
+              <div class="testimonial-rating">
+                <span class="star">★</span><span class="star">★</span
+                ><span class="star">★</span><span class="star">★</span
+                ><span class="star">★</span>
+              </div>
+            </div>
+            <div class="testimonial-content">
+              <p>
+                חזרתי לזיכרונות ילדותי, דיברתי על הוריי, נישואיי, ילדיי… היום
+                הנכדים שלי יכולים לראות את הסרט, לשמוע את קולי...
+              </p>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-author">
+                <strong>רחל ומיכאל ק.</strong>
+                <span>מתנה משפחתית • לפני 3 שבועות</span>
+              </div>
+              <div class="testimonial-rating">
+                <span class="star">★</span><span class="star">★</span
+                ><span class="star">★</span><span class="star">★</span
+                ><span class="star">★</span>
+              </div>
+            </div>
+            <div class="testimonial-content">
+              <p>
+                הענקנו את הביוגרפיה המצולמת לאבינו ליום הולדתו ה־80. הוא התרגש
+                מאוד לספר את סיפורו ולהעביר את ערכיו...
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-controls">
+          <button class="scroll-btn scroll-left">‹</button>
+          <button class="scroll-btn scroll-right">›</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="tarifs">
+      <h3>מחירים</h3>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h4>חבילה בסיסית</h4>
+          <p class="price">החל מ־₪4000</p>
+          <ul>
+            <li>ראיון מונחה</li>
+            <li>צילום</li>
+            <li>עריכה עם שילוב תמונות</li>
+          </ul>
+        </div>
+
+        <div class="pricing-card">
+          <h4>פרויקט מותאם אישית</h4>
+          <p class="price">בהצעת מחיר אישית</p>
+          <ul>
+            <li>מותאם לצרכים שלכם</li>
+            <li>הצעת מחיר לאחר שיחה</li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <!-- Contact -->
     <section id="contact" class="contact">
       <h2>צור קשר</h2>
-      <form action="#" method="post">
-        <input type="text" name="name" placeholder="שמך" required />
+      <form
+        action="mailto:your-address@mail.com"
+        method="POST"
+        enctype="text/plain"
+      >
+        <input type="text" name="name" placeholder="השם שלך" required />
         <input type="email" name="email" placeholder="האימייל שלך" required />
-        <textarea name="message" placeholder="הודעתך" required></textarea>
-        <button type="submit" class="btn-primary">שלח</button>
-        <i class="fa-brands fa-whatsapp btn-primary" style="color: #1fd366"></i>
+        <textarea name="message" placeholder="ההודעה שלך" required></textarea>
+        <div class="form-buttons">
+          <button type="submit" class="btn-primary">שלח</button>
+          <a
+            href="https://wa.me/33612345678"
+            target="_blank"
+            class="whatsapp btn-primary"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
       </form>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-      <p>© 2025 עדויות – כל הזכויות שמורות.</p>
+      <p>© 2025 סיפורי חיים – כל הזכויות שמורות.</p>
     </footer>
 
     <script type="module" src="../assets/js/main.js"></script>
