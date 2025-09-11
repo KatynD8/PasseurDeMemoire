@@ -496,7 +496,7 @@ h3 {
   line-height: 1.5;
 }
 #about_how .videos-highlight {
-  display: flex;
+  display: none;
   flex-direction: row;
   gap: 20px;
   min-height: 500px;
