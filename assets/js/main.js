@@ -12,9 +12,12 @@ document.addEventListener("DOMContentLoaded", () => {
   initHeroAnimations();
 });
 const wrapper = document.querySelector(".testimonials-wrapper");
+const card = document.querySelector(".testimonial-card");
+const cardWidth = card.offsetWidth + 24; // 24px = gap
+
 document.querySelector(".scroll-left").addEventListener("click", () => {
-  wrapper.scrollBy({ left: -400, behavior: "smooth" });
+  wrapper.scrollBy({ left: -cardWidth, behavior: "smooth" });
 });
 document.querySelector(".scroll-right").addEventListener("click", () => {
-  wrapper.scrollBy({ left: 400, behavior: "smooth" });
+  wrapper.scrollBy({ left: cardWidth, behavior: "smooth" });
 });

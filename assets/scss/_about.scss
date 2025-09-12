@@ -26,11 +26,7 @@
 #testimonials {
   display: flex;
   .testimonials_title {
-    background: linear-gradient(
-      270deg,
-      rgba(0, 55, 184, 1) 50%,
-      rgba(20, 94, 184, 1) 100%
-    );
+background: $color-accent;
   }
 }
 
@@ -47,11 +43,7 @@
     flex-direction: column-reverse;
   }
   .about-me_right {
-    background: linear-gradient(
-      90deg,
-      rgba(0, 55, 184, 1) 50%,
-      rgba(20, 94, 184, 1) 100%
-    );
+background: $color-accent;
   }
 }
 
@@ -68,11 +60,7 @@
 .about-me_right {
   flex: 1;
   padding: 2rem;
-  background: linear-gradient(
-    270deg,
-    rgba(0, 55, 184, 1) 50%,
-    rgba(20, 94, 184, 1) 100%
-  );
+background: $color-accent;
   color: $color-bg;
   text-align: left;
 }
